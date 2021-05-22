@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Movie App</title>
+  <meta name="description" content="The Movie App">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="css/styles.css?v=1.0"/>
+</head>
+<body>
+  <div class="col-lg-8 mx-auto p-3 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <h1>Movie App</h1>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <label for="movie-search">Filter by</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+              </span>
+              <input name="movie-search" id="movie-search" type="text" class="form-control" placeholder="Search a movie .." aria-label="Username" aria-describedby="basic-addon1">
+              <span id="clear-search-container" class="input-group-text invisible">
+                <button id="clear-search" type="button" class="btn-close" aria-label="Close"></button>
+              </span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row">
+              <!-- Sorting Functionality -->
+              <div class="col-6">
+                <label for="movie-sorting">Sort by</label>
+                <select name="movie-sorting" id="sort-by" class="form-select" aria-label="Sort Movies">
+                  <option value="title">Title</option>
+                  <option value="rating">Rating</option>
+                  <option value="year">Year</option>
+                </select>
+              </div>
+              <!-- Orderby Functionality -->
+              <div class="col-6">
+                <label for="movie-orderby">Order by</label>
+                <select name="movie-orderby" id="order-by" class="form-select" aria-label="Order By">
+                  <option value="asc">Ascending</option>
+                  <option value="desc">Descending</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Movie Table -->
+      <table class="mt-4 table">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Year</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+    <footer class="pt-5 my-5 text-muted border-top">
+      Built with Typescript &amp; Bootstrap.
+    </footer>
+  </div>
+  <script type="module" src="js/bundle.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous" defer></script>
+  </body>
+</html>
